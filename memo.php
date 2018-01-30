@@ -363,7 +363,7 @@ function HTMLFooter() {
 	 </td></tr>
 	<tr><td>	
 	<table border=0 cellspacing=0 cellpadding=2 align=left bgcolor=#444444 width=100%>	
-	<tr><td align=center><font size=2 color=white face=돋움><img src=icon.gif>낙서수- <? echo $gNoOfData; ?> / </font><a  href="https://github.com/gunman97/memo"><font size=1 face=arial color=#99ccff>(repository)</font></a> <fb:like href="http://airpage.org/memo" send="false" width="110" show_faces="false" layout="button_count"></fb:like></td></tr>
+	<tr><td align=center><font size=2 color=white face=돋움><img src=icon.gif>낙서수- <? echo $gNoOfData; ?> / </font><a  href="https://github.com/airpage/memo"><font size=1 face=arial color=#99ccff>(repository)</font></a> <fb:like href="http://airpage.org/memo" send="false" width="110" show_faces="false" layout="button_count"></fb:like></td></tr>
 	<tr><td align=center><font color=white size=1>Copyright(c) 2009-2017 <a  href=http://airpage.org/>AiRPAGE</a> All rights reserved.</font></td></tr>
 	</table>	
 	</td></tr>
