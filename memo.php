@@ -2,15 +2,12 @@
 
 
 include "dbcon.php";
-include "mobile_device_detect.php";
 
 $bitlyusername = "bitly user name"; //
 $bitlykey = "bitly open api key"; //
 $tableName = "my_table_name"; //
 
 selectAction();
-
-$mobile = mobile_device_detect();
 
 function selectAction()
 {
@@ -55,8 +52,6 @@ function readData($gDataX, $gDataY) {
 
 
 function HTMLHeader($gDataX, $gDataY) {
-	global $mobile;
-
 	$gFirstTitle = "AiRPAGE MEMO";
 
 	if(isset($gDataX) || isset($gDataY)) {
@@ -114,16 +109,11 @@ echo "onLoad='";
 
 if(isset($gDataX) || isset($gDataY)) {
 	echo "myScroll($gDataX,  $gDataY);";
-	if( $mobile ) {}
-	else {
-	    echo "showMyMessage($gDataX,  $gDataY);";
-	}
+	echo "showMyMessage($gDataX,  $gDataY);";
+	
 }
 else {
-	if( $mobile ) {}
-	else {
-		    echo "showMyMessage(0,0);";
-	}
+	echo "showMyMessage(0,0);";
 }
 
 echo "'>";
@@ -305,7 +295,7 @@ function ShowRecentNext($CurPage)
 }
 
 function HTMLFooter() {
-	global $mobile, $dbcon, $tableName;
+	global $dbcon, $tableName;
 	
 ?>
 
@@ -338,11 +328,6 @@ function HTMLFooter() {
 	</div>
 
 <?
-
-	
-	if( $mobile ) {}
-	else
-	{
 		$query = "SELECT * FROM `$tableName`"; 	 	
 		$result = mysql_query($query, $dbcon) or die("{\"result\":\"error\", \"reason\":\"lnvalid Token\"}\n");	
 		$gNoOfData = mysql_num_rows($result);
@@ -385,11 +370,7 @@ function HTMLFooter() {
 		</body></html>
 
 <?
-
-	}
-
 }
-
 
 function showInputForm() {
 ?>
